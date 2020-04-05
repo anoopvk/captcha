@@ -16,8 +16,8 @@ $y = ($height / 2) + ($fontsize / 2);
 $font = dirname(__FILE__) . '/font/Arial.ttf';
 
 // creating random string
-$permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-// $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyz';
+// $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+$permitted_chars = '123456789abcdefghijkmnpqrstuvwxyz';
 
 $text = substr(str_shuffle($permitted_chars), 0, 10);
 $_SESSION['captchacode'] = $text;
@@ -45,7 +45,7 @@ for ($i = 0; $i < $textlength; $i++) {
 
     $x += $fontsize;
 }
-$linenumber = $height / 40;
+$linenumber = $height / 30;
 for ($i = 0; $i < $linenumber; $i++) {
     $x1 = 0;
     $x2 = $width;
